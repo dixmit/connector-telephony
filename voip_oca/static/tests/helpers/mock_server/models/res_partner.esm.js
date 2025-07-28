@@ -7,7 +7,7 @@
 import {MockServer} from "@web/../tests/helpers/mock_server";
 import {patch} from "@web/core/utils/patch";
 
-patch(MockServer.prototype, {
+patch(MockServer.prototype, "voip_oca.MockServer", {
     async _performRPC(_route, {model, method, args, kwargs}) {
         if (model !== "res.partner") {
             return super._performRPC(...arguments);

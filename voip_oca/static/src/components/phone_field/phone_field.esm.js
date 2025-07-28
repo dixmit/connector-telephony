@@ -7,7 +7,7 @@ import {PhoneField} from "@web/views/fields/phone/phone_field";
 import {patch} from "@web/core/utils/patch";
 import {useService} from "@web/core/utils/hooks";
 
-patch(PhoneField.prototype, {
+patch(PhoneField.prototype, "voip_oca.PhoneField", {
     setup() {
         super.setup();
         this.agent = useService("voip_agent_oca");

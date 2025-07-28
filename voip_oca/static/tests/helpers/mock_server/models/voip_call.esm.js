@@ -7,7 +7,7 @@
 import {MockServer} from "@web/../tests/helpers/mock_server";
 import {patch} from "@web/core/utils/patch";
 
-patch(MockServer.prototype, {
+patch(MockServer.prototype, "voip_oca.MockServer", {
     /**
      * @override
      */
